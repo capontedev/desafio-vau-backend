@@ -1,0 +1,30 @@
+{
+  "name": "vau",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "copy:env": "copyfiles ./.env ./dist/",
+    "start": "node --env-file=.env dist/main.js",
+    "dev": "npx dotenv -e .env ts-node ./src/main.ts",
+    "build": "tsc && npm run copy:env"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.10.2",
+    "copyfiles": "^2.4.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "dotenv-cli": "^8.0.0",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.12.0",
+    "mongoose": "^8.9.2"
+  }
+}
